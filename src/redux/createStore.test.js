@@ -5,7 +5,10 @@ import { createStore as createReduxStore } from 'redux';
 import createStore from './createStore';
 
 describe('createStore', () => {
-  const CLIENT = {};
+  const CLIENT = {
+    reducer: jest.fn(() => ({})),
+    middleware: jest.fn(() => ({}))
+  };
   const STATE = {};
   const OBJECT = {};
   
