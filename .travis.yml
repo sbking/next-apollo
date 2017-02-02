@@ -1,0 +1,8 @@
+deploy:
+  provider: npm
+  email: stephen.brian.king@gmail.com
+  api_key:
+    secure: L3TPS6B6dHyT7eTr2WoB0Y6Q1pNIlpCrd/whR2bO+1NsFETrDFQpXkcaQfUA9iTLdAkmh4ROEGbQs5A3o2ist0z+BIsqgLfsAwokSCThN9yJwbNKiVw6gd9TznwWHirt/SUB+uekZJ9EwNe1TkC3EGDPLh2m2UKBGFk9F2D3ClFH4fo+A0lhJl9w4V+1CFK2X8fRIYIsVowJyH7E7TzXd5ZAUbC8sIHOppZ/whnRx7fxlkt6CWhKWMwxtJPQqUYDk5LKdae1d+pRYCmL00quvXR8zUBdT4fsr1aBtZo3VQY49wgWSuuNL6Mdm9RCWyZxd2QHb4HUdlN3d9DRc3NfzG9uY4bECED46X2oI2LdCLBUBKUyeyx8obwQQcgZUj6vTICFRrUP8rM+sjkRCkb5EdZJtynfSDz3bPmewfCRNZcD+Za/c70+jiMdPzeq10EhgdEvoa4bgGEMaG2rTflFoBE9JWZif48nwlqE2Y36hV4AHaNhFBUYfwzyPZzNReBiQ0GUwBKkACJHvM4C2iWaeRHc66+iPe3VZcQrxWofosyKguf+t2eYCkardLkjyZBlXLjVi1LxLh5n1hgqd/+Ioga0g9TI5FbRgi1IWYY2AO9VnfOslj9iwRdPtdF/EWG88K6SSkBUV0qkneFUL7y7W4yqLnYm0/LLAzVpwbe8Luk=
+  on:
+    tags: true
+    repo: sbking/next-apollo

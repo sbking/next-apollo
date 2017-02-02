@@ -1,10 +1,13 @@
 {
   "name": "next-apollo",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "ApolloClient integration for Next.js",
   "main": "dist/index.js",
-  "repository": {},
-  "author": "Stephen King <stephen@footstepsmarketing.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sbking/next-apollo.git"
+  },
+  "author": "Stephen King <stephen.brian.king@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "jest",
