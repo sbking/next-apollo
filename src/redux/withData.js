@@ -1,7 +1,7 @@
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import React from 'react';
 import 'isomorphic-fetch';
-import { initClient } from '../apollo';
+import { initClient } from '../apollo/initClient';
 import initStore from './initStore';
 
 const uri = 'https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn';
