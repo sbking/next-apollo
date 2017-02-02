@@ -1,3 +1,7 @@
+language: node_js
+node_js:
+  - "4"
+  - "6"
 deploy:
   provider: npm
   email: stephen.brian.king@gmail.com
