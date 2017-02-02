@@ -11,7 +11,8 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "babel src --out-dir dist --ignore '**/*.test.js'"
+    "build": "babel src --out-dir dist --ignore '**/*.test.js'",
+    "prepublish": "yarn run build"
   },
   "dependencies": {
     "apollo-client": "^0.8.1",
