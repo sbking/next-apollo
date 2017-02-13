@@ -1,7 +1,6 @@
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import React from 'react';
 import 'isomorphic-fetch';
-import 'babel-polyfill';
 
 export const withData = (factory, Component) => (
   class extends React.Component {

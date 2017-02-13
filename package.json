@@ -1,6 +1,6 @@
 {
   "name": "next-apollo",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "ApolloClient integration for Next.js",
   "main": "dist/withData.js",
   "repository": {
@@ -24,6 +24,7 @@
     "babel-cli": "^6.22.2",
     "babel-jest": "^18.0.0",
     "babel-plugin-react-require": "^3.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
     "babel-plugin-transform-class-properties": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.22.0",
     "babel-plugin-transform-runtime": "^6.22.0",

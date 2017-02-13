@@ -4,6 +4,7 @@
     "react-require",
     "transform-object-rest-spread",
     "transform-class-properties",
+    "transform-async-to-generator",
     "transform-runtime"
   ]
 }
