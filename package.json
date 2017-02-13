@@ -1,8 +1,8 @@
 {
   "name": "next-apollo",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "ApolloClient integration for Next.js",
-  "main": "dist/index.js",
+  "main": "dist/withData.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sbking/next-apollo.git"
@@ -21,8 +21,7 @@
   "peerDependencies": {
     "apollo-client": "^0.8.1",
     "react": "^15.4.2",
-    "redux": "^3.6.0",
-    "redux-devtools-extension": "^2.0.0"
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
