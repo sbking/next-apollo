@@ -1,6 +1,6 @@
 {
   "name": "next-apollo",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "ApolloClient integration for Next.js",
   "main": "dist/withData.js",
   "repository": {
@@ -20,19 +20,14 @@
   },
   "peerDependencies": {
     "apollo-client": "^0.8.1",
-    "babel-polyfill": "^6.22.0",
     "react": "^15.4.2",
     "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
     "babel-jest": "^18.0.0",
-    "babel-plugin-transform-async-to-generator": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.22.0",
-    "babel-plugin-transform-regenerator": "^6.22.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
-    "jest-cli": "^18.1.0"
+    "jest-cli": "^18.1.0",
+    "next": "^2.0.0-beta"
   },
   "jest": {
     "verbose": true,
