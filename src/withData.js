@@ -17,14 +17,14 @@ export const withData = (Component) => {
       const props = await getInitialProps(context);
       const client = getApolloClient(props);
       props.initialState = getApolloState(client);
-      const store = getReduxStore(client, initialProps);
+      const store = getReduxStore(client, props);
 
       if (!process.browser) {
         await getDataFromTree(this.prototype.render.call({ client, store, props }));
       }
 
-      initialProps.initialState = { ...store.getState(), ...getApolloState(client) };
-      return initialProps;
+      props.initialState = { ...store.getState(), ...getApolloState(client) };
+      return props;
     }
 
     constructor (props) {
