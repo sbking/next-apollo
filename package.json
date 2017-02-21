@@ -1,6 +1,6 @@
 {
   "name": "next-apollo",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "ApolloClient integration for Next.js",
   "main": "dist/withData.js",
   "repository": {
