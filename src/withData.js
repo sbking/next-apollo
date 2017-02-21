@@ -2,41 +2,35 @@ import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import React from 'react';
 import 'isomorphic-fetch';
 
-export const withData = (factory, Component) => (
-  class extends React.Component {
-    static async getInitialProps (ctx) {
-      const { client, store, props: customProps } = factory(ctx);
+const getApolloState = (client) => ({
+  [client.reduxRootKey]: client.getInitialState(),
+});
 
-      const initialProps = {
-        ...await (Component.getInitialProps ? Component.getInitialProps(ctx) : {}),
-        ...customProps,
-      };
+export const withData = (Component) => {
+  let { getInitialProps, getApolloClient, getReduxStore } = Component;
+  getInitialProps = getInitialProps ? getInitialProps.bind(Component) : () => ({});
+  getReduxStore = getReduxStore ? getReduxStore.bind(Component) : () => undefined;
+  getApolloClient = getApolloClient.bind(Component);
+  
+  return class extends React.Component {
+    static async getInitialProps (context) {
+      const props = await getInitialProps(context);
+      const client = getApolloClient(props);
+      props.initialState = getApolloState(client);
+      const store = getReduxStore(client, initialProps);
 
       if (!process.browser) {
-        const app = (
-          <ApolloProvider client={client} store={store}>
-            <Component {...initialProps} />
-          </ApolloProvider>
-        );
-        await getDataFromTree(app);
+        await getDataFromTree(this.prototype.render.call({ client, store, props }));
       }
 
-      const state = store.getState();
-      return {
-        initialState: {
-          ...state,
-          [client.reduxRootKey]: client.getInitialState(),
-        },
-        ...initialProps,
-        ...customProps,
-      };
+      initialProps.initialState = { ...store.getState(), ...getApolloState(client) };
+      return initialProps;
     }
 
     constructor (props) {
       super(props);
-      const { client, store } = factory(null, props);
-      this.client = client;
-      this.store = store;
+      this.client = getApolloClient(props);
+      this.store = getReduxStore(this.client, props);
     }
 
     render () {
@@ -47,4 +41,4 @@ export const withData = (factory, Component) => (
       );
     }
   }
-);
+};
